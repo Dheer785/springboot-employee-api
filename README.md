@@ -81,7 +81,7 @@ Client → Controller → Service → Repository → Database
 - Applied real-world backend engineering practices
 
 - ##  API Demo
-  ![API Demo](./screenshots/api-demo.png)
+  
 
 
 - Sample API requests tested using Postman
@@ -102,10 +102,9 @@ Client → Controller → Service → Repository → Database
 - ##  System Architecture
 
 ###  Layered Architecture
-![Layered Architecture](./screenshots/layered-architecture.png)
 
 ###  JWT Authentication Flow
-![JWT Flow](./screenshots/jwt-auth-flow.png)
+
 
 ###  Overall System Design
-![Architecture Overview](./screenshots/architecture-overview.png)
+
