@@ -79,3 +79,23 @@ Client → Controller → Service → Repository → Database
 - Implemented secure authentication system with JWT
 - Built system to handle concurrent users efficiently
 - Applied real-world backend engineering practices
+
+- ##  API Demo
+  ![API Demo](./screenshots/api-demo.png)
+
+
+- Sample API requests tested using Postman
+- Demonstrates authentication, CRUD operations, and validation
+- ##  Rate Limiting
+
+- Implemented basic API rate limiting to prevent abuse
+- Ensures system stability under high traffic
+- Helps protect backend from excessive requests
+
+ This is your differentiator
+ ##  Design Decisions
+
+- Used layered architecture for maintainability and separation of concerns
+- Chose JWT for stateless authentication and scalability
+- Used DTO pattern to decouple internal models from API responses
+- Applied validation and exception handling for reliability
