@@ -81,7 +81,8 @@ Client → Controller → Service → Repository → Database
 - Applied real-world backend engineering practices
 
 - ##  API Demo
-  
+  [API Demo](screenshots/api-demo.png)
+
 
 
 - Sample API requests tested using Postman
@@ -100,10 +101,12 @@ Client → Controller → Service → Repository → Database
 - Used DTO pattern to decouple internal models from API responses
 - Applied validation and exception handling for reliability
 - ##  System Architecture
+Architecture Overview](screenshots/architecture-overview.png)
 
 ###  Layered Architecture
-
+[Layered Architecture](screenshots/layered-architecture.png)
 ###  JWT Authentication Flow
+![JWT Flow](screenshots/jwt-auth-flow.png)
 
 
 ###  Overall System Design
