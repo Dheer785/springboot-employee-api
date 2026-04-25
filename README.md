@@ -101,10 +101,75 @@ Client → Controller → Service → Repository → Database
 - Used DTO pattern to decouple internal models from API responses
 - Applied validation and exception handling for reliability
 - ##  System Architecture
+This project follows a **layered architecture** to ensure separation of concerns, scalability, and maintainability.
 
 
 ###  Layered Architecture
+ Architecture Overview
+![Architecture Overview](screenshots/architecture-overview.png)
 
+The system is structured into multiple layers, each with a clear responsibility:
+
+---
+
+### 🔹 Layers Explained
+
+#### 1. Controller Layer (API Layer)
+- Handles incoming HTTP requests
+- Maps endpoints using Spring Boot REST controllers
+- Validates request data
+- Delegates business logic to the service layer
+
+#### 2. Service Layer (Business Logic)
+- Contains core application logic
+- Implements business rules and validations
+- Coordinates between controllers and repositories
+- Ensures clean separation from persistence logic
+
+#### 3. Repository Layer (Data Access)
+- Interacts with the database using Spring Data JPA
+- Provides CRUD operations
+- Abstracts database queries from the service layer
+
+#### 4. Model / Entity Layer
+- Represents database tables
+- Uses JPA annotations (`@Entity`, `@Id`, etc.)
+- Maps Java objects to relational data
+
+#### 5. DTO Layer (Data Transfer Objects)
+- Separates internal models from API responses
+- Prevents exposing sensitive fields
+- Improves API flexibility and versioning
+
+---
+
+### 🔹 JWT Authentication Flow
+![JWT Flow](screenshots/jwt-auth-flow.png)
+
+- User sends login credentials
+- Server validates credentials
+- JWT token is generated and returned
+- Client includes JWT in Authorization header
+- Backend validates token for each request
+
+---
+
+### 🔹 Key Design Principles
+
+- **Separation of Concerns** → Each layer has a single responsibility  
+- **Scalability** → Easy to extend with microservices or caching  
+- **Security** → Stateless authentication using JWT  
+- **Maintainability** → Clean and modular structure  
+- **Loose Coupling** → Layers interact through interfaces  
+
+---
+
+### 🔹 Future Improvements
+
+- Add Redis caching for performance  
+- Introduce API Gateway  
+- Migrate to microservices architecture  
+- Implement centralized logging & monitoring  
 ###  JWT Authentication Flow
 ![JWT Flow](screenshots/jwt-auth-flow.png)
 
