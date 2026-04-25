@@ -169,9 +169,69 @@ The system is structured into multiple layers, each with a clear responsibility:
 - Add Redis caching for performance  
 - Introduce API Gateway  
 - Migrate to microservices architecture  
-- Implement centralized logging & monitoring  
-###  JWT Authentication Flow
-![JWT Flow](screenshots/jwt-auth-flow.png)
+- Implement centralized logging & monitoring
+- ### 🔹 End-to-End Request Flow
+
+1. Client sends HTTP request (GET/POST) with JWT token  
+2. Request reaches **Spring Security Filter**  
+3. JWT token is extracted from Authorization header  
+4. Token is validated (signature + expiry)  
+5. User details are loaded from database  
+6. Request is forwarded to Controller  
+7. Controller calls Service layer  
+8. Service interacts with Repository  
+9. Repository fetches data from database  
+10. Response is returned back to client  
+
+---
+
+### 🔹 Component Interaction
+
+- **Client (Frontend)** → Sends API requests  
+- **Controller** → Entry point for all requests  
+- **Service Layer** → Handles business logic  
+- **Repository Layer** → Communicates with database  
+- **Database** → Stores employee data  
+- **JWT Layer** → Handles authentication & authorization  
+
+---
+
+### 🔹 Security Architecture
+
+- Stateless authentication using JWT  
+- No session storage on server  
+- Token-based authorization for each request  
+- Passwords stored using hashing (BCrypt)  
+- Unauthorized access blocked via Spring Security filters  
+
+---
+
+### 🔹 Scalability Considerations
+
+- Stateless design → easy horizontal scaling  
+- JWT eliminates session bottlenecks  
+- Can integrate Redis for caching  
+- API can be placed behind load balancer  
+- Supports microservices migration  
+
+---
+
+### 🔹 Performance Optimizations
+
+- DTO usage reduces payload size  
+- Lazy loading in JPA (if used)  
+- Database indexing for faster queries  
+- Connection pooling via HikariCP  
+
+---
+
+### 🔹 Error Handling & Validation
+
+- Global exception handling using `@ControllerAdvice`  
+- Input validation using annotations (`@Valid`)  
+- Proper HTTP status codes (400, 401, 404, 500)  
+
+
 
 
 ###  Overall System Design
