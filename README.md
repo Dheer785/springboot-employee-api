@@ -16,7 +16,7 @@ Client → Controller → Service → Repository → Database
 
 ---
 
-## 🔐 Authentication & Security
+##  Authentication & Security
 
 - JWT-based authentication
 - Role-based authorization (Admin/User)
@@ -65,7 +65,7 @@ Client → Controller → Service → Repository → Database
 
 ---
 
-## 📦 Future Enhancements
+##  Future Enhancements
 
 - Redis caching
 - Docker containerization
@@ -74,7 +74,7 @@ Client → Controller → Service → Repository → Database
 
 ---
 
-## 📌 Project Highlights
+##  Project Highlights
 
 - Designed scalable backend using layered architecture
 - Implemented secure authentication system with JWT
