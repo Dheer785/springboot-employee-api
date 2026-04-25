@@ -99,3 +99,13 @@ Client → Controller → Service → Repository → Database
 - Chose JWT for stateless authentication and scalability
 - Used DTO pattern to decouple internal models from API responses
 - Applied validation and exception handling for reliability
+- ##  System Architecture
+
+###  Layered Architecture
+![Layered Architecture](./screenshots/layered-architecture.png)
+
+###  JWT Authentication Flow
+![JWT Flow](./screenshots/jwt-auth-flow.png)
+
+###  Overall System Design
+![Architecture Overview](./screenshots/architecture-overview.png)
