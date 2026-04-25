@@ -1,5 +1,4 @@
-# springboot-employee-api
-Spring Boot REST API for Employee Management with CRUD operations using MySQL
+
 # Employee Management System (Backend API)
 
 A scalable backend system built using Spring Boot following clean architecture and production-level backend design principles.
