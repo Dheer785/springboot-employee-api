@@ -49,6 +49,8 @@ Client → Controller → Service → Repository → Database
 - Spring Boot
 - Spring Data JPA / Hibernate
 - MySQL
+- Spring Security
+- Maven
 
 ---
 
